@@ -51,7 +51,8 @@ class TargetPlatform(Enum):
     TRT_INT8      = 101
     NCNN_INT8     = 102
     OPENVINO_INT8 = 103
-    
+    TENGINE_INT8  = 104
+
     PPL_CUDA_INT8 = 201
     PPL_CUDA_INT4 = 202
     PPL_CUDA_FP16 = 203
@@ -74,6 +75,8 @@ class TargetPlatform(Enum):
 
     HEXAGON_INT8 = 801
 
+    
+
     FP32 = 0
     # SHAPE-OR-INDEX related operation
     SHAPE_OR_INDEX = -1
@@ -86,6 +89,7 @@ class TargetPlatform(Enum):
     CAFFE         = -5
     NATIVE        = -6
     ONNXRUNTIME   = -7
+    TENGINE       = -8
     # THIS IS A DUUMY PLATFORM JUST FOR CREATING YOUR OWN EXTENSION.
     EXTENSION     = -10086
 
@@ -99,7 +103,7 @@ class TargetPlatform(Enum):
             cls.PPL_DSP_INT8, cls.PPL_DSP_TI_INT8, cls.QNN_DSP_INT8, cls.TRT_INT8, cls.NCNN_INT8, cls.NXP_INT8,
             cls.SNPE_INT8, cls.PPL_CUDA_INT8, cls.PPL_CUDA_INT4, cls.EXTENSION, cls.PPL_CUDA_MIX, cls.ORT_OOS_INT8,
             cls.ACADEMIC_INT4, cls.ACADEMIC_INT8, cls.ACADEMIC_MIX, cls.METAX_INT8_C, cls.METAX_INT8_T, 
-            cls.OPENVINO_INT8, cls.FPGA_INT8}
+            cls.OPENVINO_INT8, cls.FPGA_INT8, cls.TENGINE_INT8}
 
 
 class RoundingPolicy(Enum):
